@@ -1,0 +1,80 @@
+.conteiner {}
+
+.navbarConteiner {
+    padding: 16px 0px;
+    background: #F2F2F2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    margin: 0 auto;
+    min-height: 15px;
+}
+
+.navbarNav,
+.navbarContacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.navbarNavLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease 0s;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0px 10px;
+}
+
+.navbarContactsSelect,
+.navbarContactsTell,
+.navbarContactsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+
+    img {
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+    }
+}
+
+.navbarContactsTell {
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+
+    a {
+        color: #000000;
+    }
+}
+
+
+
+.navbarContactsSelect {
+
+    select {
+        background: #c93d3300;
+        color: #C93E33;
+    }
+}
+
+.navbarContactsText {
+    a {
+        color: #000000;
+    }
+}

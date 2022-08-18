@@ -1,0 +1,11 @@
+.basketContentConteiner {
+    display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    max-width: 1300px;
+
+    @media (max-width: 972px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

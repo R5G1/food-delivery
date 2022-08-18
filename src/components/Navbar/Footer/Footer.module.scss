@@ -1,0 +1,146 @@
+.conteiner {
+    background: rgb(39, 39, 39);
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    max-width: 1130px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.footerBtnConteiner {
+    position: relative;
+    top: -70px;
+    background: rgb(255, 255, 255);
+    height: 135px;
+    padding: 0px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+
+    @media (max-width: 972px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        height: 100%;
+    }
+}
+
+.footerInput {
+    border-bottom: 1px solid rgb(124, 124, 124);
+    max-width: 250px;
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+
+    @media (max-width: 972px) {
+        margin: 10px 0px;
+    }
+}
+
+.footerBtnCall {
+    background: rgb(255, 3, 3);
+    max-width: 250px;
+    height: 50px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.headerMenuConteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 972px) {
+        flex-wrap: wrap;
+    }
+
+    padding-bottom: 20px;
+}
+
+.headerLogo {}
+
+.headerLogoImg {
+    width: 82px;
+    height: 70px;
+}
+
+.footerLinkConteiner {}
+
+.footerLink {
+    display: block;
+    margin: 5px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.footerContacts {
+    a {
+        display: block;
+        margin: 5px 0px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.footerContactsTell {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.footerContactsText {
+    text-align: right;
+}
+
+.footerLine {
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.footerInfoConteiner {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 972px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.footerInfoP {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 0px 5px;
+    }
+}
+
+.footerInfoLinkConteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerInfoLink {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    margin: 0px 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerInfoLinkImg {
+
+    width: 15px;
+    height: 15px;
+}

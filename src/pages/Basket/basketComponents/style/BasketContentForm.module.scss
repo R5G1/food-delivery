@@ -1,0 +1,91 @@
+.conteiner {
+    max-width: 280px;
+}
+
+.basketForm {
+    padding: 20px;
+}
+
+.basketTitle {
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.basketTitleP {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 280px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.basketFormTitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #B3B3B3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 15px;
+}
+
+.basketFormConteiner {
+    input {
+        padding-left: 25px;
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+        background-size: 20px 15px;
+    }
+}
+
+
+
+.basketForAmountConteiner {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 40px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketForAmountText {}
+
+.basketForAmount {
+    color: #C93E33;
+}
+
+.basketForOfferConteiner {
+    padding: 20px;
+    margin-top: 15px;
+    height: 62px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #C93E33;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 26px;
+        height: 30px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #C93E33;
+    }
+}
