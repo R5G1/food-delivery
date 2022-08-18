@@ -13,8 +13,6 @@ function App() {
 
   const [isNewArray, setisNewArray] = useState<IFormInput[]>(isArray);
 
-  const [styleBtnSort, setStyleBtnSort] = useState(dataStyleBtnSort);
-
   return (
     <div className="app">
       <AuthContext.Provider
@@ -25,8 +23,6 @@ function App() {
           setisArray,
           isNewArray,
           setisNewArray,
-          styleBtnSort,
-          setStyleBtnSort,
         }}
       >
         <BrowserRouter>

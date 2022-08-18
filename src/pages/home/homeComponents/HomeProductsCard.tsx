@@ -1,101 +1,56 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../components/Context/Context';
+import { IFormInputOrder } from '../../../components/Type/Type';
 import styles from '../homeComponents/style/HomeProductsCard.module.scss';
-import img from './images/6.png';
 interface IFormInput {
   id?: string;
-  name: string;
-  price?: string;
-  priceNumber: number;
-  type?: string;
-  gost?: string;
+  lastName?: string;
+  name?: string;
+  fatherName?: string;
+  tel?: number;
+  dateOrder?: string;
+  foodName?: string;
+  dateDeliveryBefor: string;
+  dateDeliveryAfter: string;
+  deliveryTypeDay?: string;
+  dayWeekBefor?: string;
+  dayWeekAfter?: string;
 }
 
 function ProductsCard(): JSX.Element {
-  const { isArray, setisArray, styleBtnSort, setStyleBtnSort } = useContext(AuthContext);
-  const { isNewArray, setisNewArray } = useContext(AuthContext);
-  const [count, setCount] = useState<number>(0);
+  const { isArray, setisArray, isNewArray, setisNewArray } = useContext(AuthContext);
 
-  function aadhit(array: string) {
-    const itemRu = array.toLowerCase().includes('о');
-    const itemEn = array.toLowerCase().includes('o');
-    if (itemRu || itemEn) {
-      return <div className={styles.productsCardActionName}>хит</div>;
-    }
-  }
-  function aadAction(array: string) {
-    const itemRu = array.toLowerCase().includes('а');
-    const itemEn = array.toLowerCase().includes('a');
-    if (itemRu || itemEn) {
-      return <div className={styles.productsCardActionName}>акция</div>;
-    }
-  }
-  function addNumber() {
-    return setCount(count + 1);
-  }
-  function minusNumber() {
-    if (count === 0) {
-      return setCount(count);
-    }
-    return setCount(count - 1);
-  }
-  function addBasketCount(number: number) {
-    const newAray = [...isArray];
-    newAray.forEach((item, index: number) => {
-      if (number === index) {
-        item.priceNumber = count;
-      }
-    });
-    setisArray(newAray);
-    setCount(0);
+  // function calcDate(dayWeekBefor: any, dayWeekAfter: string, deliveryTypeDay: string) {
+  //   const day = dayWeekBefor.getDay();
+  //   console.log(dayWeekBefor);
+  //   const isWeekend = day == 6 || day == 0;
+  // }
+
+  // console.log(calcDate('2021-06-20', '2021-06-29', 'ежедневная'));
+
+  console.log(checkDate('2021-06-20'));
+  console.log(checkDate('2021-06-29'));
+
+  function checkDate(dateStr: any) {
+    const [day, month, year] = dateStr.split('-');
+
+    const date = new Date(year, month - 1, day);
+
+    return date.getDay() == 0 || date.getDay() == 6;
   }
 
   const listItems = isNewArray.map((item: IFormInput, index: number) => (
-    <div
-      className={styleBtnSort ? styles.productsCardContent : styles.productsCardContentFalse}
-      key={item.id + Math.random().toString()}
-    >
-      <div className={styleBtnSort ? styles.productsCardAction : styles.productsCardActionFalse}>
-        {aadhit(item.name)}
-        {aadAction(item.name)}
+    <div className={styles.productsCardContent} key={item.id + Math.random().toString()}>
+      <div className={styles.productsCardName}>
+        период: {item.dateDeliveryBefor} - {item.dateDeliveryAfter}
       </div>
-      <img className={styles.productsCardImg} src={img} alt="" />
-
-      <div className={styles.productsCardGost}>{item.gost}</div>
-      <div className={styles.productsCardName}>{item.name}</div>
-      <div className={styles.productsCardType}>{item.type}</div>
-      <div className={styles.productsCardPrice}>{item.price} руб.</div>
-      <div
-        className={
-          styleBtnSort ? styles.productsCardHoverConteiner : styles.productsCardHoverConteinerFalse
-        }
-      >
-        <div className={styles.productsCardHoverContent}>
-          <p>{item.price} руб.</p>
-          <div className={styles.productsCardPriceHoverInput}>
-            <button onClick={addNumber}>+</button>
-            <input
-              type="number"
-              defaultValue={count}
-              onChange={(e) => setisArray(e.target.value)}
-            />
-            <button onClick={minusNumber}>-</button>
-          </div>
-        </div>
-        <div className={styles.productsCardHoverBtn}>
-          <button onClick={() => addBasketCount(index)}>В корзину</button>
-          <button>Подробнее</button>
-        </div>
+      <div className={styles.productsCardName}>доставка: {item.deliveryTypeDay} </div>
+      <div className={styles.productsCardName}>
+        дни питания: {item.dayWeekBefor}-{item.dayWeekAfter}
       </div>
     </div>
   ));
-  return (
-    <div
-      className={styleBtnSort ? styles.productsCardConteiner : styles.productsCardConteinerFalse}
-    >
-      {listItems}
-    </div>
-  );
+  return <div className={styles.productsCardConteiner}>{listItems}</div>;
 }
 
 export default ProductsCard;

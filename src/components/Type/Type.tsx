@@ -6,6 +6,21 @@ export interface IFormInput {
   type?: string;
   gost?: string;
 }
+export interface IFormInputOrder {
+  id?: string;
+  lastName?: string;
+  name?: string;
+  fatherName?: string;
+  tel?: number;
+  dateOrder?: string;
+  foodName?: string;
+  dateDeliveryBefor?: string;
+  dateDeliveryAfter?: string;
+  deliveryTypeDay?: string;
+  dayWeekBefor?: string;
+  dayWeekAfter?: string;
+}
+
 export interface isArray {
   id?: string;
   name?: string;

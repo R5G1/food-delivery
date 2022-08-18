@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import styles from '../basketComponents/style/BasketCreateCard.module.scss';
-import img from '../../home/homeComponents/images/6.png';
 import imgBasket from '../basketComponents/style/images/1.svg';
 import { AuthContext } from '../../../components/Context/Context';
 interface IFormInput {
@@ -49,9 +48,7 @@ function BasketCreateCard() {
     .filter((array: IFormInput) => array.priceNumber > 0)
     .map((item: IFormInput, index: number) => (
       <div className={styles.productsCardContent} key={item.id + Math.random().toString()}>
-        <div className={styles.productsCardImg}>
-          <img src={img} alt="" />
-        </div>
+        <div className={styles.productsCardImg}>{/* <img src={img} alt="" /> */}</div>
 
         <div className={styles.productsCardTextConteiner}>
           <p className={styles.productsCardGost}>{item.gost}</p>

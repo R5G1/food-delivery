@@ -1,62 +1,18 @@
 .productsCardConteiner {
-
     display: flex;
-
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    img {
-        margin: auto;
-    }
-}
-
-.productsCardConteinerFalse {
-    display: flex;
-
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-
-    img {
-        margin: 0;
-    }
-
 }
 
 .productsCardContent {
 
     border: 1px solid #E6E6E6;
-    height: 450px;
-    width: 280px;
     display: flex;
-    align-items: flex-start;
-    justify-content: start;
     flex-direction: column;
-    background: #FFFFFF;
-    padding: 15px;
-
-    &:hover {
-        box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
-
-        .productsCardHoverConteiner {
-            display: block;
-            box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .productsCardPrice {
-            display: none;
-        }
-    }
-}
-
-.productsCardContentFalse {
-    position: relative;
-    border: 1px solid #E6E6E6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
@@ -66,65 +22,11 @@
 
     &:hover {
         box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
-
-        .productsCardHoverConteinerFalse {
-            display: block;
-            box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
-        }
-
     }
 }
 
-.productsCardImg {
-    max-height: 200px;
-    max-width: 220px;
 
-}
-
-.productsCardAction {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-}
-
-.productsCardActionFalse {
-    position: static;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-}
-
-.productsCardActionName {
-    background: #C93E33;
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    margin: 5px 0;
-    padding: 10px;
-    text-align: center;
-}
-
-.productsCardGost {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    background: #c93d3321;
-    text-align: center;
-    width: 83px;
-    height: 12px;
-    color: #C93E33;
-    margin: 60px 0px 20px 0px;
-
-}
-
-.productsCardName,
-.productsCardType {
+.productsCardName {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
@@ -133,100 +35,3 @@
 }
 
 
-.productsCardType {}
-
-.productsCardPrice {
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-}
-
-.productsCardHoverConteiner {
-    display: none;
-    position: relative;
-    z-index: 1;
-    width: 280px;
-    padding: 0 15px;
-    margin-left: -16px;
-    background: #ffffff;
-    border: 1px solid #E6E6E6;
-    border-top: none;
-}
-
-.productsCardHoverConteinerFalse {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    padding: 0 15px;
-    background: #ffffff;
-    border: 1px solid #E6E6E6;
-    border-top: none;
-}
-
-.productsCardHoverContent {
-
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-}
-
-.productsCardPriceHoverInput {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    button {
-        border: 1px solid #E6E6E6;
-        height: 35px;
-        width: 35px;
-        font-size: 19px;
-    }
-
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    input {
-        border: 1px solid #E6E6E6;
-        appearance: Default;
-        max-width: 50px;
-        height: 35px;
-        padding: 0 10px;
-        text-align: center;
-
-
-    }
-}
-
-.productsCardHoverBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    button {
-        width: 240px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 19px;
-        border-radius: 4px;
-        margin: 10px 0;
-
-        &:first-child {
-            background: #C93E33;
-            color: #FFFFFF;
-        }
-    }
-}
