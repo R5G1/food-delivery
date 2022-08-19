@@ -17,27 +17,92 @@ interface IFormInput {
   dayWeekAfter?: string;
 }
 
+// interface IcheckDate {}
 function ProductsCard(): JSX.Element {
   const { isArray, setisArray, isNewArray, setisNewArray } = useContext(AuthContext);
 
-  // function calcDate(dayWeekBefor: any, dayWeekAfter: string, deliveryTypeDay: string) {
-  //   const day = dayWeekBefor.getDay();
-  //   console.log(dayWeekBefor);
-  //   const isWeekend = day == 6 || day == 0;
-  // }
+  function arrayDate(dayWeekBefor: string, dayWeekAfter: string) {
+    const [yearBefor, monthBefor, dayBefor] = dayWeekBefor.split('-');
+    const [yearAfter, monthAfter, dayAfter] = dayWeekAfter.split('-');
 
-  // console.log(calcDate('2021-06-20', '2021-06-29', 'ежедневная'));
+    const array: string[] = [];
+    let sumMonth = 0;
 
-  console.log(checkDate('2021-06-20'));
-  console.log(checkDate('2021-06-29'));
+    const sumDay = +dayAfter - +dayBefor;
 
-  function checkDate(dateStr: any) {
-    const [day, month, year] = dateStr.split('-');
+    function crietArray(params: number): void {
+      let sumMonthFor = 1;
+      for (let i = 0; i <= params + sumMonth; i++) {
+        let sumArray = `${yearBefor}-${monthBefor}-${+dayBefor + i}`;
 
-    const date = new Date(year, month - 1, day);
+        if (daysInMonth(+monthBefor, +yearBefor) <= +dayBefor + i) {
+          sumArray = `${yearBefor}-${+monthBefor + 1}-${sumMonthFor++}`;
+        }
 
-    return date.getDay() == 0 || date.getDay() == 6;
+        array.push(sumArray);
+      }
+    }
+
+    if (+monthAfter - +monthBefor === 1) {
+      sumMonth = daysInMonth(+monthBefor, +yearBefor) - +dayBefor;
+    }
+    crietArray(sumDay);
+    return array;
   }
+
+  function daysInMonth(month: number, year: number) {
+    return new Date(year, month, 0).getDate();
+  }
+
+  function checkDate(dateStr: string, params1: string, params2: string) {
+    const weekDay = [
+      'Воскресенье',
+      'Понедельник',
+      'Вторник',
+      'Среда',
+      'Четверг',
+      'Пятница',
+      'Суббота',
+    ];
+
+    let numberParams1 = 0;
+    let numberParams2 = 0;
+    const result = weekDay.map((item, index) => {
+      if (item == params1) {
+        numberParams1 = index;
+      }
+      if (item == params2) {
+        numberParams2 = index;
+      }
+    });
+
+    const [year, month, day] = dateStr.split('-');
+    const date: Date = new Date(Number(year), Number(month) - 1, Number(day));
+
+    if (params1 == weekDay[1] && params2 == weekDay[0]) {
+      return date.getDay();
+    }
+    if (numberParams1 <= numberParams2) {
+      return date.getDay() >= numberParams1 && date.getDay() <= numberParams2;
+    }
+    if (numberParams1 >= numberParams2) {
+      return date.getDay() >= numberParams2 && date.getDay() <= numberParams1;
+    }
+  }
+
+  function calcDate(
+    dateDeliveryBefor: string,
+    dateDeliveryAfter: string,
+    deliveryTypeDay: string,
+    dayWeekBefor: string,
+    dayWeekAfter: string
+  ) {
+    const result = arrayDate('2022-05-01', '2022-06-29').filter((item, index) => {
+      return checkDate(item, dayWeekBefor, dayWeekAfter);
+    });
+    return result;
+  }
+  console.log(calcDate('2021-05-01', '2021-06-29', 'ежедневная', 'Понедельник', 'Воскресенье'));
 
   const listItems = isNewArray.map((item: IFormInput, index: number) => (
     <div className={styles.productsCardContent} key={item.id + Math.random().toString()}>
