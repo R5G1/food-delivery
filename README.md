@@ -1,5 +1,11 @@
 # Food-delivery
 
+#link: https://r5g1-food-delivery.netlify.app/
+
+#us: HTML, SCSS, SCSS-module, React, TypeScript, Webpack
+
+![Screenshot 2022-08-20 155920](https://user-images.githubusercontent.com/71373383/185747266-1bc22055-db4d-403f-adf0-f539042b5e4f.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
