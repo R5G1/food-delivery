@@ -1,0 +1,41 @@
+.productsCardConteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.productsCardContent {
+
+    border: 1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    max-width: 870px;
+    background: #FFFFFF;
+    padding: 15px;
+
+    &:hover {
+        box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.productsCardName,
+.productsCardDate {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin: 5px 5px;
+}
+
+.productsCardDate {
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}

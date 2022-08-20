@@ -1,0 +1,150 @@
+.conteiner {
+
+    background: #E5E5E5;
+}
+
+.home {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    max-width: 1130px;
+    padding: 0px 10px;
+    padding-bottom: 110px;
+    margin: 0 auto;
+
+}
+
+.homeMenuConteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.homeMenuTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.homeMenuTitleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 50%;
+    font-size: 22px;
+    height: 35px;
+    width: 35px;
+    background: rgb(255, 255, 255);
+}
+
+.homeMenuTitleP {
+    margin-left: 20px;
+}
+
+.homeMenuTitleSort {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeMenuTitleSortBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(250, 250, 250, 0);
+}
+
+.homeMenuTitleSortBtnConteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    background: rgb(250, 250, 250);
+    border-radius: 10px;
+}
+
+.homeMenuTitleSortImgB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: background 0.3s ease 0s;
+    border-radius: 50px;
+
+    img {
+        background: rgb(255, 1, 1);
+    }
+}
+
+.homeMenuTitleSortImgS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: background 0.3s ease 0s;
+    border-radius: 50px;
+
+    img {
+        background: rgb(252, 251, 251);
+    }
+}
+
+.homeMenuTitleSortP {
+    margin: 0px 10px;
+}
+
+
+.homeContentConteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    @media (max-width: 972px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.homeFooter {}
+
+.homeFooterFilter {}
+
+.homeFooterText {
+    padding-top: 80px;
+}
+
+.homeFooterTextTitleP {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 40px 0px 20px 0px;
+}
+
+.homeFooterTextP {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 10px 0px;
+}
+
+.homeFooterTextBtn {
+    background: rgba(0, 0, 0, 0);
+    color: #C93E33;
+
+}
