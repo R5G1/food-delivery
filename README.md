@@ -1,11 +1,5 @@
 # Food-delivery
 
-#link: https://r5g1-bastion-group.netlify.app/
-
-#us: HTML, SCSS, SCSS-module, React, TypeScript, Webpack
-
-![2](https://user-images.githubusercontent.com/71373383/180824411-46f29418-7f31-40d6-861d-457046dc2f0e.jpg)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
