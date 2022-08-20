@@ -9,7 +9,6 @@ function Products() {
   const { isArray, setisArray } = useContext(AuthContext);
 
   const { register, handleSubmit, setValue } = useForm<IFormInputOrder>();
-  const [type, setType] = useState<IFormInputOrder[]>([]);
 
   const onSubmit: SubmitHandler<IFormInputOrder> = (data: IFormInputOrder, event: any) => {
     setisArray([...isArray, data]);
@@ -20,9 +19,8 @@ function Products() {
       if (item.dateDeliveryBefor === '') item.dateDeliveryBefor = dateDeliveryBefor;
     });
     setisArray(newAray);
-    // event.target.reset();
+    event.target.reset();
   };
-  console.log(isArray);
 
   const [minDate, setMinDate] = useState('');
   const [dateDeliveryBefor, setDateDeliveryBefor] = useState('');

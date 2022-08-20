@@ -1,19 +1,5 @@
-import { IFormInput, IFormInputOrder } from '../Type/Type';
+import { IFormInputOrder } from '../Type/Type';
 
-export const dataType: IFormInput[] = [
-  {
-    id: 'string',
-    name: 'ОПБ1',
-  },
-  {
-    id: 'string',
-    name: 'ОПБ2',
-  },
-  {
-    id: 'string',
-    name: 'КХ',
-  },
-];
 export const dataArray: IFormInputOrder[] = [
   {
     id: 'string',
@@ -23,7 +9,7 @@ export const dataArray: IFormInputOrder[] = [
     tel: 8787,
     dateOrder: 'string',
     foodName: 'string',
-    dateDeliveryBefor: '2021-06-21',
+    dateDeliveryBefor: '2021-06-11',
     dateDeliveryAfter: '2021-06-24',
     deliveryTypeDay: 'через день на 2 дня',
     dayWeekBefor: 'Понедельник',
@@ -38,9 +24,9 @@ export const dataArray: IFormInputOrder[] = [
     dateOrder: 'string',
     foodName: 'string',
     dateDeliveryBefor: '2021-06-01',
-    dateDeliveryAfter: '2021-06-14',
+    dateDeliveryAfter: '2021-06-18',
     deliveryTypeDay: 'через день на 2 дня',
-    dayWeekBefor: 'Понедельник',
+    dayWeekBefor: 'Вторник',
     dayWeekAfter: 'Воскресенье',
   },
   {
@@ -51,10 +37,10 @@ export const dataArray: IFormInputOrder[] = [
     tel: 8787,
     dateOrder: 'string',
     foodName: 'string',
-    dateDeliveryBefor: '2021-06-29',
+    dateDeliveryBefor: '2021-06-19',
     dateDeliveryAfter: '2021-06-31',
     deliveryTypeDay: 'ежедневная',
-    dayWeekBefor: 'Понедельник',
+    dayWeekBefor: 'Среда',
     dayWeekAfter: 'Воскресенье',
   },
   {
@@ -65,10 +51,10 @@ export const dataArray: IFormInputOrder[] = [
     tel: 8787,
     dateOrder: 'string',
     foodName: 'string',
-    dateDeliveryBefor: '2021-06-21',
+    dateDeliveryBefor: '2021-06-2',
     dateDeliveryAfter: '2021-06-24',
     deliveryTypeDay: 'через день на один день',
-    dayWeekBefor: 'Понедельник',
+    dayWeekBefor: 'Четверг',
     dayWeekAfter: 'Воскресенье',
   },
   {
@@ -79,11 +65,11 @@ export const dataArray: IFormInputOrder[] = [
     tel: 8787,
     dateOrder: 'string',
     foodName: 'string',
-    dateDeliveryBefor: '2021-05-10',
+    dateDeliveryBefor: '2021-05-1',
     dateDeliveryAfter: '2021-05-20',
     deliveryTypeDay: 'ежедневная',
     dayWeekBefor: 'Понедельник',
-    dayWeekAfter: 'Воскресенье',
+    dayWeekAfter: 'Пятница',
   },
   {
     id: 'string',
@@ -93,11 +79,11 @@ export const dataArray: IFormInputOrder[] = [
     tel: 8787,
     dateOrder: 'string',
     foodName: 'string',
-    dateDeliveryBefor: '2021-06-29',
+    dateDeliveryBefor: '2021-06-19',
     dateDeliveryAfter: '2021-06-31',
     deliveryTypeDay: 'через день на один день',
     dayWeekBefor: 'Понедельник',
-    dayWeekAfter: 'Воскресенье',
+    dayWeekAfter: 'Суббота',
   },
 ];
 
