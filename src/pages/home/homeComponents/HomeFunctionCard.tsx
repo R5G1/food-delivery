@@ -91,10 +91,10 @@ function CalcDate(
     return result;
   }
   if (deliveryTypeDay == 'через день на один день') {
-    return resultOneDay.map((item) => `${item} - 1 порции, `);
+    return resultOneDay.map((item) => `${item} - 1 порции `);
   }
   if (deliveryTypeDay == 'через день на 2 дня') {
-    return resultOneDay.map((item) => `${item} - 2 порции, `);
+    return resultOneDay.map((item) => `${item} - 2 порции `);
   }
 }
 export default CalcDate;

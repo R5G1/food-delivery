@@ -68,7 +68,7 @@ function ProductsCard(): JSX.Element {
           item.deliveryTypeDay,
           item.dayWeekBefor,
           item.dayWeekAfter
-        )}
+        ).join(' , ')}
       </div>
     </div>
   ));
